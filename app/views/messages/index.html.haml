@@ -1,11 +1,11 @@
 .menu
   .menu__head
     .menu__head__user-name
-      Name
+      =current_user.name
     .menu__head__icon
       =link_to "/", class: "menu__head__icon menu__head__icon--edit" do
         = fa_icon 'edit', class: "menu__head__icon--btn"
-      =link_to "/", class: "menu__head__icon menu__head__icon--cog" do
+      =link_to edit_user_path(current_user), class: "menu__head__icon menu__head__icon--cog" do
         = fa_icon 'cog', class: "menu__head__icon--btn"
   .menu__group-list
     .menu__group-list__group
@@ -55,6 +55,3 @@
           = fa_icon 'image'
           %input{type: "file", style: "display:none"}
       %input{type: "submit", value: "Send", class: "contents__bottom__new-message__submit-btn"}
-
-
-
