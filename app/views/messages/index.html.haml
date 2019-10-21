@@ -1,0 +1,60 @@
+.menu
+  .menu__head
+    .menu__head__user-name
+      Name
+    .menu__head__icon
+      =link_to "/", class: "menu__head__icon menu__head__icon--edit" do
+        = fa_icon 'edit', class: "menu__head__icon--btn"
+      =link_to "/", class: "menu__head__icon menu__head__icon--cog" do
+        = fa_icon 'cog', class: "menu__head__icon--btn"
+  .menu__group-list
+    .menu__group-list__group
+      .menu__group-list__group-name
+        Group1
+      .menu__group-list__group-text
+        Hey
+    .menu__group-list__group
+      .menu__group-list__group-name
+        Group2
+      .menu__group-list__group-text
+        HeyHey
+
+
+.contents
+  .contents__head
+    .contents__head__left
+      .contents__head__left__group-name
+        Current_group
+      .contents__head__left__member-name
+        Member : Hoge Hoge Fuga Fuga
+    .contents__head__edit-btn
+      Edit
+  .contents__main
+    .contents__main__text-box
+      .contents__main__text-box--up
+        .contents__main__text-box--up__name
+          Kei
+        .contents__main__text-box--up__date
+          2019/10/18(Fri) 16:49:32
+      .contents__main__text-box__comment
+        Hello world
+    .contents__main__text-box
+      .contents__main__text-box--up
+        .contents__main__text-box--up__name
+          Nishiguchi
+        .contents__main__text-box--up__date
+          2019/10/19(Sut) 16:49:32
+      .contents__main__text-box__comment
+        hogehoge
+
+  .contents__bottom
+    %form{action: "index", class: "contents__bottom__new-message"}
+      .contents__bottom__new-message__input-box
+        %input{name: "text", placeholder: "type a message", class: "contents__bottom__new-message__input-box__text", type: "text"}
+        %label{class: "contents__bottom__new-message__input-box__image"}
+          = fa_icon 'image'
+          %input{type: "file", style: "display:none"}
+      %input{type: "submit", value: "Send", class: "contents__bottom__new-message__submit-btn"}
+
+
+
