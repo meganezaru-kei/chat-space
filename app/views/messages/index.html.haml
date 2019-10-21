@@ -48,13 +48,13 @@
         hogehoge
 
   .contents__bottom
-    %form{:action => "index", :class => "contents__bottom__new-message"}
+    %form{action: "index", class: "contents__bottom__new-message"}
       .contents__bottom__new-message__input-box
-        %input{:name => "text", :placeholder => "type a message", :class => "contents__bottom__new-message__input-box__text", :type => "text"}
-        %label{:class => "contents__bottom__new-message__input-box__image"}
+        %input{name: "text", placeholder: "type a message", class: "contents__bottom__new-message__input-box__text", type: "text"}
+        %label{class: "contents__bottom__new-message__input-box__image"}
           = fa_icon 'image'
-          %input{:type => "file", :style => "display:none"}
-      %input{:type => "submit", :value => "Send", :class => "contents__bottom__new-message__submit-btn"}
+          %input{type: "file", style: "display:none"}
+      %input{type: "submit", value: "Send", class: "contents__bottom__new-message__submit-btn"}
 
 
 
