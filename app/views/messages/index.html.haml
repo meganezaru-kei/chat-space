@@ -3,7 +3,7 @@
     .menu__head__user-name
       =current_user.name
     .menu__head__icon
-      =link_to "/", class: "menu__head__icon menu__head__icon--edit" do
+      =link_to new_group_path, class: "menu__head__icon menu__head__icon--edit" do
         = fa_icon 'edit', class: "menu__head__icon--btn"
       =link_to edit_user_path(current_user), class: "menu__head__icon menu__head__icon--cog" do
         = fa_icon 'cog', class: "menu__head__icon--btn"
