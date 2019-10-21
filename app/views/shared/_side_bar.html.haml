@@ -10,7 +10,7 @@
   .menu__group-list
     .menu__group-list__group
       - current_user.groups.each do |group|
-        = link_to '#' do
+        = link_to group_messages_path(group) do
           .menu__group-list__group-name
             = group.name
           .menu__group-list__group-text
