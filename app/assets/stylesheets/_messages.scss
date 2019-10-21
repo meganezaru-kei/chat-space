@@ -1,0 +1,145 @@
+.menu{
+  float: left;
+  width: 300px;
+  height: 100vh;
+  color: #fff;
+  &__head{
+    height: 100px;
+    background-color: #253141;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    &__user-name{
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      font-weight: bold;
+    }
+    &__icon{
+      display: flex;
+      color: #fff;
+      text-decoration: none;
+      &--edit{
+        margin-left: 0.3rem;
+      }
+      &--cog{
+        margin-left: 0.3rem;
+      }
+    }
+  }
+  &__group-list{
+    background-color: #2f3e51;
+    height: calc(100vh - 100px);
+    overflow: scroll;
+    &__group{
+      margin-bottom: 40px;
+      &-name{
+        margin: 20px 20px 0;
+        font-size: 15px;
+        font-weight: bold;
+      }
+      &-text{
+        margin: 5px 20px 20px;
+        font-size: 11px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.contents{
+  float: right;
+  width: calc(100vw - 300px);
+  height: 100vh;
+  &__head{
+    border-bottom: 1px solid #eeeeee;
+    height: 100px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    overflow: scroll;
+    &__left{
+      margin-top: 35px;
+      &__group-name{
+        font-size: 20px;
+        color: #333333;
+        margin-bottom: 15px;
+      }
+      &__member-name{
+        font-size: 12px;
+        color: #999999;
+      }
+    }
+    &__edit-btn{
+      height: 40px;
+      line-height: 40px;
+      padding: 0 20px;
+      margin-top: 28px;
+      border: 1px $btn-color solid;
+      position: absolute;
+      right: 40px;
+      color: $btn-color;
+    }
+  }
+  &__main{
+    height: calc(100vh - 190px);
+    background-color: #fafafa;
+    overflow: scroll;
+    &__text-box{
+      padding: 46px 40px 0;
+      &--up{
+        display: flex;
+        &__name{
+          font-size: 16px;
+          color: $text-color;
+          font-weight: bold;
+          padding-right: 10px;
+        }
+        &__date{
+          font-size: 12px;
+          color: #999999;
+        }
+      }
+      &__comment{
+        font-size: 14px;
+        color: $text-color;
+        padding-top: 10px;
+      }
+    }
+  }
+  &__bottom{
+    height: 90px;
+    background-color: #ddd;
+    &__new-message{
+      padding: 20px 40px;
+      display: flex;
+      &__input-box{
+        position: relative;
+        width: 100%;
+        &__text{
+          height: 50px;
+          width: 100%;
+          padding-left: 10px;
+          color: $text-color;
+          border-style: none;
+        }
+        &__image{
+          font-size: 1.3rem;
+          position: absolute;
+          top: 10px;
+          right: 0px;
+          cursor: pointer;
+        }
+      }
+      &__submit-btn{
+        width: 100px;
+        height: 50px;
+        padding: 0 30px;
+        margin-left: 25px;
+        background-color: $btn-color;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+  }
+}
