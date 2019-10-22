@@ -4,28 +4,16 @@
   .contents__head
     .contents__head__left
       .contents__head__left__group-name
-        Current_group
+        = @group.name
       .contents__head__left__member-name
-        Member : Hoge Hoge Fuga Fuga
+        Member : 
+        - @group.users.each do |users|
+          = users.name
     .contents__head__edit-btn
       Edit
   .contents__main
-    .contents__main__text-box
-      .contents__main__text-box--up
-        .contents__main__text-box--up__name
-          Kei
-        .contents__main__text-box--up__date
-          2019/10/18(Fri) 16:49:32
-      .contents__main__text-box__comment
-        Hello world
-    .contents__main__text-box
-      .contents__main__text-box--up
-        .contents__main__text-box--up__name
-          Nishiguchi
-        .contents__main__text-box--up__date
-          2019/10/19(Sut) 16:49:32
-      .contents__main__text-box__comment
-        hogehoge
+    = render @messages
+
 
   .form
     = form_for [@group, @message] do |f|
