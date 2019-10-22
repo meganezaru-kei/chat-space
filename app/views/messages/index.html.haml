@@ -27,11 +27,12 @@
       .contents__main__text-box__comment
         hogehoge
 
-  .contents__bottom
-    %form{action: "index", class: "contents__bottom__new-message"}
-      .contents__bottom__new-message__input-box
-        %input{name: "text", placeholder: "type a message", class: "contents__bottom__new-message__input-box__text", type: "text"}
-        %label{class: "contents__bottom__new-message__input-box__image"}
-          = fa_icon 'image'
-          %input{type: "file", style: "display:none"}
-      %input{type: "submit", value: "Send", class: "contents__bottom__new-message__submit-btn"}
+  .form
+    = form_for [@group, @message] do |f|
+      .form__input-box
+        = f.text_field :content, class: 'form__input-box__message', placeholder: 'type a message'
+        .form__input-box__mask
+          = f.label :image, class: 'form__input-box__mask__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'
