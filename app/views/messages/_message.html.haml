@@ -8,4 +8,4 @@
     - if message.content.present?
       %p.contents__main__text-box__comment__text
         = message.content
-    = iamge_tag message.image.url, class: "contents__main__text-box__comment__image" if message.image.present?
+    = image_tag message.image.url, class: "contents__main__text-box__comment__image" if message.image.present?
