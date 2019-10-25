@@ -37,9 +37,9 @@ $(function() {
     .done(function(data){
       var html = buildHTML(data);
       $('.contents__main').append(html)
-      $('.form__input-box__message').val('')
       $('.contents__main').animate({scrollTop: $('.contents__main')[0].scrollHeight})
       $('input').prop('disabled', false)
+      $('#new_message')[0].reset();
     })
     .fail(function(){
       alert('error');
