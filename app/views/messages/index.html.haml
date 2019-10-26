@@ -9,7 +9,7 @@
         Member : 
         - @group.users.each do |users|
           = users.name
-    .contents__head__edit-btn
+    = link_to edit_group_path(@group.id), class: "contents__head__edit-btn" do
       Edit
   .contents__main
     = render @messages

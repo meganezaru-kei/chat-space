@@ -33,19 +33,19 @@
     overflow: scroll;
     &__group{
       margin-bottom: 40px;
-      &-name{
+      &--box{
+        text-decoration: none;
+        color: #fff;
+      }
+      &--name{
         margin: 20px 20px 0;
         font-size: 15px;
         font-weight: bold;
-        color: #fff;
-        text-decoration: none;  
       }
-      &-text{
+      &--text{
         margin: 5px 20px 40px;
         font-size: 11px;
         font-weight: bold;
-        color: #fff;
-        text-decoration: none;  
       }
     }
   }
@@ -83,6 +83,7 @@
       position: absolute;
       right: 40px;
       color: $btn-color;
+      text-decoration: none;
     }
   }
   &__main{
